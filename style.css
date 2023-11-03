@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Salsa&display=swap");
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Salsa", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.bg {
+    background: url("./images/painting-image.png") no-repeat center/cover;
+    position: absolute;
+    top: -30;
+    left: -30;
+    width: calc(100vw + 60px);
+    height: calc(100vh + 60px);
+    z-index: -1;
+    filter: blur(0px);
+}
+
+.progress-bar {
+    font-size: 75px;
+    /* color: rgb(3, 2, 1); */
+    background: linear-gradient(to right, rgb(25, 180, 246), rgb(15, 247, 158));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
