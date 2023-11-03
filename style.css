@@ -17,18 +17,53 @@ body {
 .bg {
     background: url("./images/painting-image.png") no-repeat center/cover;
     position: absolute;
-    top: -30;
-    left: -30;
+    top: -30px;
+    left: -30px;
     width: calc(100vw + 60px);
     height: calc(100vh + 60px);
     z-index: -1;
     filter: blur(0px);
+    border-radius: 1em;
+    /* transform: scale(.5); */
+    /* animation: expand 1s; */
 }
 
-.progress-bar {
+@keyframes expand {
+    0% {
+        transform: scale(0);
+        filter: blur(1);
+    }
+
+    100% {
+        transform: scale(1);
+        filter: blur(0);
+    }
+}
+
+/* .progress-bar {
     font-size: 75px;
-    /* color: rgb(3, 2, 1); */
     background: linear-gradient(to right, rgb(25, 180, 246), rgb(15, 247, 158));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+} */
+
+.progress-bar {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: 0.5s;
+    background: gradient;
 }
+/* 
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #1f1f1f40;
+  } */
